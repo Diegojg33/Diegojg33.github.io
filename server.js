@@ -16,10 +16,7 @@ const httpPort = 3000; // Puerto en el que escuchará el servidor web local
 const GITHUB_PAGES_URL = 'https://diegojg33.github.io'; // CORREGIDO: minúsculas, sin barra al final
 
 const allowedOrigins = [
-    GITHUB_PAGES_URL
-    // Puedes añadir otros orígenes si los necesitas para desarrollo, por ejemplo:
-    // 'http://localhost:3000',
-    // 'http://127.0.0.1:3000'
+    'https://diegojg33.github.io'  
 ];
 
 app.use(cors({
