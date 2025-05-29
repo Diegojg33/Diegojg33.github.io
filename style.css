@@ -1,0 +1,129 @@
+/* public/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el login y el panel de control si ambos fueran visibles */
+}
+
+#login-section, #control-panel-section {
+    width: 350px; /* Un poco más ancho para acomodar mejor los títulos */
+}
+
+#control-panel-section h2:first-of-type { /* El título principal "Panel de Control LEDs" */
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="password"], button {
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Importante para que el width incluya padding y border */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+#login-error, #status {
+    min-height: 1.2em;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+#login-error { color: red; }
+#status { color: green; font-weight: bold; }
+
+
+/* Estilos para cada item de control de LED */
+.led-item {
+    display: flex; /* Permite alinear el título y el switch en la misma línea */
+    justify-content: space-between; /* Espacio entre el título y el switch */
+    align-items: center; /* Centra verticalmente el título y el switch */
+    padding: 12px 5px; /* Padding vertical y un poco horizontal */
+    border-bottom: 1px solid #eee;
+    text-align: left; /* Asegura que el contenido dentro del .led-item (como el h2) se alinee a la izquierda por defecto */
+}
+.led-item:last-of-type { /* El último .led-item no necesita borde inferior */
+    border-bottom: none;
+}
+
+.led-item h2 {
+    margin: 0; /* Elimina el margen por defecto del h2 */
+    font-size: 1.1em; /* Tamaño del título para cada LED */
+    color: #333;
+    flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
+    margin-right: 15px; /* Espacio entre el título y el switch */
+}
+
+/* Estilo para el Switch (toggle) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    flex-shrink: 0; /* Evita que el switch se encoja si el título es largo */
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #28a745; /* Verde para ON, puedes cambiarlo a #2196F3 si prefieres azul */
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #28a745; /* Sombra de foco que coincida con el color ON */
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#logoutButton {
+    margin-top: 25px !important; /* Añadido !important para asegurar que se aplique sobre el margen de button general */
+    background-color: #dc3545 !important; /* Rojo para logout */
+}
+#logoutButton:hover {
+    background-color: #c82333 !important;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control LEDs Arduino con Login</title>
+    <!-- Enlace a tu archivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-section" class="container">
+        <h2>Iniciar Sesión</h2>
+        <input type="password" id="password" placeholder="Contraseña" value="">
+        <button id="loginButton">Ingresar</button>
+        <p id="login-error"></p>
+    </div>
+
+    <div id="control-panel-section" class="container" style="display:none;">
+        <h2>Panel de Control LEDs</h2>
+
+        
+        <!-- Switch 1 -->
+        <div class="led-item">
+            <h2>Puerta Principal (LED 1)</h2>
+            <label class="switch">
+                <input type="checkbox" id="led1" data-led-number="1" />
+                <span class="slider"></span>
+            </label>
+        </div>
+        <!-- Switch 2 -->
+        <div class="led-item">
+            <h2>Luz Sala (LED 2)</h2>
+            <label class="switch">
+                <input type="checkbox" id="led2" data-led-number="2" />
+                <span class="slider"></span>
+            </label>
+        </div>
+        <!-- Switch 3 -->
+        <div class="led-item">
+            <h2>Luz Cocina (LED 3)</h2>
+            <label class="switch">
+                <input type="checkbox" id="led3" data-led-number="3" />
+                <span class="slider"></span>
+            </label>
+        </div>
+        <!-- Switch 4 -->
+        <div class="led-item">
+            <h2>Luz Exterior (LED 4)</h2>
+            <label class="switch">
+                <input type="checkbox" id="led4" data-led-number="4" />
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+        <p id="status"></p>
+        <button id="logoutButton" style="margin-top: 20px; background-color: #dc3545;">Cerrar Sesión</button>
+    </div>
+
+    <!-- Enlace a tu archivo JavaScript separado -->
+    <script src="script.js" defer></script>
+</body>
+</html>
