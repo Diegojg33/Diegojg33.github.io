@@ -42,7 +42,7 @@ app.use(cors({
 // Esto debe ir DESPUÉS de la configuración de CORS si quieres que CORS se aplique también
 // a las peticiones de archivos estáticos (aunque para GET de archivos no suele ser un problema).
 // Para nuestro caso, donde CORS es principalmente para la ruta /control-led, el orden es flexible.
-app.use(express.static(_dirname));
+app.use(express.static(__dirname));
 
 // 5. ----- CONFIGURACIÓN DEL PUERTO SERIE -----
 // ¡IMPORTANTE! Cambia 'COM_DE_TU_ARDUINO' al puerto serie correcto de tu Arduino.
