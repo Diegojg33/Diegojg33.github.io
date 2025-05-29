@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 // ¡¡¡IMPORTANTE!!! Cambia 'COM_DE_TU_ARDUINO' al puerto serie correcto de tu Arduino.
 // En Windows es algo como 'COM3', 'COM4', etc.
 // En Linux/macOS es algo como '/dev/ttyUSB0', '/dev/ttyACM0'.
-const arduinoPortPath = 'COM_DE_TU_ARDUINO'; // <--- ¡¡¡CAMBIA ESTO!!!
+const arduinoPortPath = 'COM5'; // <--- ¡¡¡CAMBIA ESTO!!!
 let serialPort;
 
 try {
