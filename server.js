@@ -13,7 +13,7 @@ const httpPort = 3000; // Puerto en el que escuchará el servidor web local
 // 3. --- CONFIGURAR CORS ---
 // Define la URL exacta de tu página de GitHub Pages.
 // ¡¡¡REEMPLAZA ESTO CON TU URL REAL!!!
-const GITHUB_PAGES_URL = 'https://diegojg33.github.io/'; 
+const GITHUB_PAGES_URL = 'https://Diegojg33.github.io/'; 
 // Ejemplo: const GITHUB_PAGES_URL = 'https://diegojg33.github.io';
 
 const allowedOrigins = [
