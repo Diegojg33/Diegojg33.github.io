@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Variable para almacenar la URL de Ngrok.
     // Puedes pre-llenarla aquí si haces commit/push con una URL fija,
     // o dejarla vacía para que se tome del input.
-const NGROK_URL = 'https://909f-186-121-245-122.ngrok-free.app';
+const NGROK_URL = 'https://e733-190-186-2-134.ngrok-free.app';
     // --- CONFIGURACIÓN DEL LOGIN (CLIENT-SIDE - NO SEGURO PARA PRODUCCIÓN) ---
     const VALID_PASSWORD = "1234";
 
